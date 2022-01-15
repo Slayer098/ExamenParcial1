@@ -1,9 +1,12 @@
 
+
 ##Saavedra and Stouffer (2013) studied several plant–pollinator networks.
 These can be represented as rectangular matrices where the rows are polli-
 nators, the columns plants, a 0 indicates the absence and 1 the presence of an
 Interaction between the plant and the pollinator. 
 ## Codigos
+Imprimi el n3.txt usando cat
+
 cat n3.txt
 " n de filas"
 
