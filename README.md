@@ -20,4 +20,5 @@
 - Buzzard2015_data.csv para el ejercicio_1104.sh
 - Tabla de: http://www.russelllab.org/aas/aas.html para el ejercicio 7
 ### Explicación de la data utilizada
+- Se detalla ejercicio_1104.sh
 - 
