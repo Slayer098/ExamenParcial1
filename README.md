@@ -23,5 +23,6 @@
 ### Explicación de la data utilizada
 - Se detalla el ejercicio_1103.sh
 - Se detalla el ejercicio_1104.sh
-
+- Link del ejercicio_1103.sh : https://www.youtube.com/watch?v=iUEGXKzLU_Y
+-
 
