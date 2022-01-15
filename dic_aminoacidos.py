@@ -1,4 +1,3 @@
-
 dic_aminoacidos = {
     "Trp": [1550, 1.34, ],
     "Cys": [1905, 1.76, ],
@@ -21,11 +20,13 @@ dic_aminoacidos = {
     "Ser": [1206, 7.38, ],
     "Leu": [1127, 9.36, ],   
 }
+
 print("este es el diccionario dic_aminoacidos: ")
-print(dic_aminoacidos)
+print(dic_aminoacidos) 
 
 aminoacidos = list(dic_aminoacidos.keys()) 
 print()
 print("esta es la lista aminoacidos: ", aminoacidos) 
+propiedades = list(dic_aminoacidos.values()) 
 print()
 print("esta es la lista propiedades: ", propiedades) 
