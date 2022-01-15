@@ -1,30 +1,67 @@
-##Saavedra and Stouffer (2013) studied several plant–pollinator networks.
-These can be represented as rectangular matrices where the rows are polli-
-nators, the columns plants, a 0 indicates the absence and 1 the presence of an
-Interaction between the plant and the pollinator.
-Intrucciones de comandos
-Usaremos el archivo n3.txt
-# n de columnas
-imprimo cat../Saavedra2013/n3.txt | wc -l
-cat imprime contenido de los archivos ( cat file1 file2 file3)
-wc -l Cuenta solo líneas ( sort w, sort c)
-# n de filas
-head muestra las filas(lo que pongamos)
-tr translasion de caracteres de un archivo
-## Codigos
 
-cat n3.txt
-" n de filas"
+# Exercise 1.10.4 on Buzzard et al. (2016)
+###################################################
+# 1)  Write a script that, for a given csv file and
+# column number, prints:
+# - Column name
+# - Number of distinct values
+# - Minimum value
+# - Maximum value
 
-cat ../data/Saavedra2013/n3.txt | wc -l
+# First, we need to extract the column name.
+# For example, for the Buzzard data file, and col 1
 
+cut -d ',' -f 1 ./Buzzard2015_data.csv | head -n 1
 
-" n de columnas "
+# biomass
 
-head -n1 ../data/Saavedra2013/n3.txt | tr -d " " | tr -d "\ n" | wc -c
+# Second, we need to obtain the number of
+# distinct values. We can sort the results
+# (after removing the header), and use uniq
 
-## Write a script that prints the numbers of rows and columns for each network
-### Use of For
-for permite repetir una tarea con ligeras variaciones, generalmente si son tareas
+cut -d ',' -f 1 ./Buzzard2015_data.csv | tail -n +2 | sort | uniq | wc -l
 
-for file in $(ls *.txt); do wc -l $file;  head -n1 $file | grep -o " " | wc -l; done
+# 285
+
+# Third, to get the max/min value we can use
+# the code above, sort using -n, and either
+# head (for min) or tail (for max) the result.
+
+# Minimum
+cut -d ',' -f 1 ./Buzzard2015_data.csv | tail -n +2 | sort -n | head -n 1
+
+# 1.048466198
+
+# Maximum
+cut -d ',' -f 1 ./Buzzard2015_data.csv | tail -n +2 | sort -n | tail -n 1
+
+# 14897.29471
+
+# The file explore.sh is possible incarnation
+# of the script.
+
+# For example:
+
+bash explore.sh ./Buzzard2015_data.csv 6
+
+# Column name
+# Abund.n
+# Number of distinct values:
+# 46
+# Minimum value:
+# 1
+# Maximum value:
+# 157
+
+# This works well also for alphabetical order:
+
+bash explore.sh ./Buzzard2015_data.csv 3
+
+# Column name
+# genus
+# Number of distinct values:
+# 85
+# Minimum value:
+# Acacia
+# Maximum value:
+# Zanthoxylum
