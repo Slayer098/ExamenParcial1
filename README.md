@@ -5,6 +5,7 @@
 - cedula: 155000600
 - celular: 0969274805
 - Edad: 21
+- anderson.yumbo@est.ikiam.edu.ec
 ### Características del computador
 - Intel(R) Core(TM) i5-10210U CPU @ 1.60GHz   2.11 GHz
 - 8,00 GB (7,78 GB usable)
@@ -22,4 +23,5 @@
 ### Explicación de la data utilizada
 - Se detalla el ejercicio_1103.sh
 - Se detalla el ejercicio_1104.sh
+
 
