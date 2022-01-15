@@ -19,12 +19,12 @@ Imprimi el n3.txt usando cat
 cat n3.txt
 " n de filas"
 
-cat ./Saavedra2013/n3.txt | wc -l
+cat ../Saavedra2013/n3.txt | wc -l
 
 
 " n de columnas "
 
-head -n1 ./Saavedra2013/n3.txt | tr -d " " | tr -d "\ n" | wc -c
+head -n1 ../Saavedra2013/n3.txt | tr -d " " | tr -d "\ n" | wc -c
 
 
 ## Write a script that prints the numbers of rows and columns for each network 
